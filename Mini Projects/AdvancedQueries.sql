@@ -94,7 +94,7 @@ FROM Customer;
 SELECT date(p.payment_date), sum(p.amount) 
 FROM payment p
 JOIN rental r on r.rental_id = p.rental_id
-JOIN inventory i on i.inventory_id = r.inventory_ida
+JOIN inventory i on i.inventory_id = r.inventory_id
 WHERE i.store_id = 1
 GROUP BY date(p.payment_date)
 ORDER BY date(p.payment_date);
